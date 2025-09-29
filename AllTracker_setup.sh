@@ -7,4 +7,4 @@ cd demo_video
 sh download_video.sh
 cd ..
 
-atp-get install -y ffmpeg
+apt-get install -y ffmpeg
