@@ -14,11 +14,13 @@ cd third_party/megasam/base
 LIBRARY_PATH=$CONDA_PREFIX/lib:$LIBRARY_PATH python setup.py install
 cd ../../..
 
-cd -p checkpoints/
+mkdir -p checkpoints
+cd checkpoints
 wget https://huggingface.co/zbww/tapip3d/resolve/main/tapip3d_final.pth
 cd ..
 
-cd -p third_party/megasam/Depth-Anything/checkpoints
+mkdir -p third_party/megasam/Depth-Anything/checkpoints
+cd third_party/megasam/Depth-Anything/checkpoints
 wget https://huggingface.co/spaces/LiheYoung/Depth-Anything/resolve/main/checkpoints/depth_anything_vitl14.pth
 cd ../../../..
 
