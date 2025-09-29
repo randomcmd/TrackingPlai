@@ -18,9 +18,7 @@ cd -p checkpoints/
 wget https://huggingface.co/zbww/tapip3d/resolve/main/tapip3d_final.pth
 cd ..
 
-cd third_party/megasam/Depth-Anything
-mkdir checkpoints
-cd checkpoints
+cd -p third_party/megasam/Depth-Anything/checkpoints
 wget https://huggingface.co/spaces/LiheYoung/Depth-Anything/resolve/main/checkpoints/depth_anything_vitl14.pth
 cd ../../../..
 
