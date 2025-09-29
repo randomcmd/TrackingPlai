@@ -14,7 +14,7 @@ cd third_party/megasam/base
 LIBRARY_PATH=$CONDA_PREFIX/lib:$LIBRARY_PATH python setup.py install
 cd ../../..
 
-cd checkpoints/
+cd -p checkpoints/
 wget https://huggingface.co/zbww/tapip3d/resolve/main/tapip3d_final.pth
 cd ..
 
