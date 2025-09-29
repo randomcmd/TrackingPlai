@@ -25,5 +25,6 @@ wget https://huggingface.co/spaces/LiheYoung/Depth-Anything/resolve/main/checkpo
 cd ../../../..
 
 cd third_party/megasam/cvd_opt
-gdown https://drive.google.com/file/d/1MqDajR89k-xLV0HIrmJ0k-n8ZpG6_suM
+# Downloads raft-things
+gdown 1MqDajR89k-xLV0HIrmJ0k-n8ZpG6_suM
 cd ../../..
