@@ -9,11 +9,13 @@ import torch
 import comfy.model_management as mm
 
 # Add TAPIP3D to Python path dynamically
+# TAPIP3D is cloned as a separate git repository during setup (see TAPIP3D_setup.sh)
+# We need to add it to sys.path to import its modules
 _tapip3d_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "TAPIP3D")
 if os.path.exists(_tapip3d_path) and _tapip3d_path not in sys.path:
     sys.path.insert(0, _tapip3d_path)
 
-# Import from TAPIP3D - now using absolute import after adding to sys.path
+# Import from TAPIP3D using absolute import (after adding to sys.path)
 try:
     from utils.inference_utils import inference, load_model
 except ImportError as e:
