@@ -19,7 +19,7 @@ class AllTrackerNode:
 
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("tracking_preview")
-    DESCRIPTION = cleandoc(__doc__)
+    # DESCRIPTION = cleandoc(__doc__)
     FUNCTION = "track"
 
     CATEGORY = "Tracking"
