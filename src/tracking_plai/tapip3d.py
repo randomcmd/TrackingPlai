@@ -2,7 +2,10 @@ from inspect import cleandoc
 from pathlib import Path
 import json
 
+import sys
+sys.path.insert(1, '../TAPIP3D')
 from TAPIP3D.utils.inference_utils import inference, load_model
+
 import numpy as np
 import torch
 
