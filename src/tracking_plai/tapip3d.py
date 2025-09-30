@@ -3,7 +3,14 @@ from pathlib import Path
 import json
 
 import sys
-sys.path.insert(1, '../TAPIP3D')
+import os
+
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "TrackingPlai")
+)                     # …\ComfyUI\custom_nodes\..\..\TrackingPlai
+if PROJECT_ROOT not in sys.path:
+    sys.path.append(PROJECT_ROOT)
+
 from TAPIP3D.utils.inference_utils import inference, load_model
 
 import numpy as np
