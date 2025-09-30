@@ -5,11 +5,7 @@ import json
 import sys
 import os
 
-print(os.path.dirname(__file__))
-
-PROJECT_ROOT = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..", "TrackingPlai")
-)  #  …\ComfyUI\custom_nodes\..\..\TrackingPlai
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
