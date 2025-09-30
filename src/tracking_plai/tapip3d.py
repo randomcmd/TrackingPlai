@@ -2,6 +2,7 @@ from inspect import cleandoc
 from pathlib import Path
 import json
 
+from TAPIP3D.utils.inference_utils import inference, load_model
 import numpy as np
 import torch
 
@@ -38,7 +39,11 @@ class Tapip3DNode:
         
         # TODO: import load_model(checkpoint) from TAPIP3D
         # from utils.inference_utils import load_model, read_video, inference, get_grid_queries, resize_depth_bilinear
-        model = load_model("path/to/checkpoint")
+        path = Path("")
+        print(path.absolute)
+        return ("", images)
+    
+        model = load_model("")
         model.to(self.device)
 
         inference_res = (int(model.image_size[0] * np.sqrt(resolution_factor)), int(model.image_size[1] * np.sqrt(resolution_factor)))
