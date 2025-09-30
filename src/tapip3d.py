@@ -6,7 +6,7 @@ import os
 # TODO: THIS IMPORT IS THE BIGGEST HEADACHE EVER running it works but importing it breaks everything
 tapip_path = os.path.join(os.path.dirname(__file__), "..", "TAPIP3D")  # "C:\\Users\\mailr\\Workspace\\plai\\tracking\\TrackingPlai\\TAPIP3D"
 sys.path.append(tapip_path)
-from ..TAPIP3D import inference, load_model
+from TAPIP3D import inference, load_model
 
 import numpy as np
 import torch
