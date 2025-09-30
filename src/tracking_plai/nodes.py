@@ -1,6 +1,6 @@
-from tracking_plai.example import TrackingPlai
-from tracking_plai.alltracker import AllTrackerNode
-from tracking_plai.tapip3d import Tapip3DNode
+from .example import TrackingPlai
+from .alltracker import AllTrackerNode
+from .tapip3d import Tapip3DNode
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
