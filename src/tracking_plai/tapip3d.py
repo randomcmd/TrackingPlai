@@ -24,5 +24,5 @@ class Tapip3DNode:
 
     CATEGORY = "Tracking"
 
-    def track(self, images):
+    def track(self, images, tracking_point_x, tracking_point_y):
         return (images,)
