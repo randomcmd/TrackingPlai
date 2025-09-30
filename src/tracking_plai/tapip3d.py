@@ -29,12 +29,11 @@ class Tapip3DNode:
     CATEGORY = "Tracking"
 
     def track(self, images, tracking_point_x, tracking_point_y):
-
         images_np = images.cpu().numpy()
         images_np = np.ascontiguousarray((images_np * 255).astype(np.uint8))
         video = self.preprocess_images(images)
 
-        return (images,)
+        return ("", images, )
     
     def preprocess_images(self, images):
         # (B, H, W, C) -> (1, B, C, H, W)
