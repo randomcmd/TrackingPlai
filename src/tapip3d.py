@@ -8,7 +8,7 @@ tapip_path = os.path.join(os.path.dirname(__file__), "..", "TAPIP3D")
 sys.path.append(tapip_path)
 sys.path.append(os.path.join(tapip_path, "third_party"))
 sys.path.append(os.path.join(tapip_path, "utils"))
-from ..TAPIP3D.utils.inference_utils import inference, load_model
+from ..TAPIP3D.inference import inference, load_model
 
 import numpy as np
 import torch
