@@ -10,6 +10,10 @@ else
   echo "Downloading TrackingPlai"
   cd custom_nodes
   git clone https://github.com/randomcmd/TrackingPlai
+  cd TrackingPlai
+  ./TAPIP3D_setup.sh
+  ./AllTracker_setup.sh
+  cd ..
   cd ..
 fi
 
