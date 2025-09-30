@@ -1,5 +1,17 @@
 """Top-level package for tracking_plai."""
 
+import os
+from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+print(f'{PROJECT_ROOT=}')
+
+if PROJECT_ROOT not in sys.path:
+    print("Appending project root to sys path")
+    sys.path.append(PROJECT_ROOT)
+
 __all__ = [
     "NODE_CLASS_MAPPINGS",
     "NODE_DISPLAY_NAME_MAPPINGS",

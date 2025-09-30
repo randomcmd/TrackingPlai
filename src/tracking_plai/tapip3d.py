@@ -3,15 +3,6 @@ from pathlib import Path
 import json
 
 import sys
-import os
-
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
-print(f'{PROJECT_ROOT=}')
-
-if PROJECT_ROOT not in sys.path:
-    print("Appending project root to sys path")
-    sys.path.append(PROJECT_ROOT)
 
 from TAPIP3D.utils.inference_utils import inference, load_model
 
