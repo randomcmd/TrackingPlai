@@ -1,5 +1,6 @@
 from inspect import cleandoc
 import numpy as np
+import json
 
 import comfy.model_management as mm
 
@@ -29,13 +30,19 @@ class Tapip3DNode:
     CATEGORY = "Tracking"
 
     def track(self, images, tracking_point_x, tracking_point_y):
-        _ = tracking_point_x
-        _ = tracking_point_y
         images_np = images.cpu().numpy()
         images_np = np.ascontiguousarray((images_np * 255).astype(np.uint8))
         video = self.preprocess_images(images)
 
-        return ("", images, )
+        # Track video using model
+        results = [{
+            "x": tracking_point_x, 
+            "y": tracking_point_y, 
+            "z": 0,
+        }] * images.len
+
+        # Transform tracked point to string
+        return (json.dumps(results), images,)
     
     def preprocess_images(self, images):
         # (B, H, W, C) -> (1, B, C, H, W)
