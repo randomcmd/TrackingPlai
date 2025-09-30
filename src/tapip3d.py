@@ -43,9 +43,6 @@ class Tapip3DNode:
         
         # TODO: import load_model(checkpoint) from TAPIP3D
         # from utils.inference_utils import load_model, read_video, inference, get_grid_queries, resize_depth_bilinear
-        path = Path("")
-        print(path.absolute)
-        return ("", images)
     
         model = load_model("")
         model.to(self.device)
