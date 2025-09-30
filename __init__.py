@@ -13,7 +13,7 @@ __author__ = """tracking-plai"""
 __email__ = "you@gmail.com"
 __version__ = "0.0.1"
 
-from .src.tracking_plai.nodes import NODE_CLASS_MAPPINGS
-from .src.tracking_plai.nodes import NODE_DISPLAY_NAME_MAPPINGS
+from .src.nodes import NODE_CLASS_MAPPINGS
+from .src.nodes import NODE_DISPLAY_NAME_MAPPINGS
 
 
