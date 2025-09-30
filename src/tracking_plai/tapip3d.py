@@ -34,14 +34,14 @@ class Tapip3DNode:
         images_np = np.ascontiguousarray((images_np * 255).astype(np.uint8))
         video = self.preprocess_images(images)
 
-        _ = video
+        frame_amount = video.shape[1]
 
         # Track video using model
         results = [{
             "x": tracking_point_x, 
             "y": tracking_point_y, 
             "z": 0,
-        }] * images.len
+        }] * frame_amount
 
         # Transform tracked point to string
         return (json.dumps(results), images,)
