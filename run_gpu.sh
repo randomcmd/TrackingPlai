@@ -11,7 +11,7 @@ else
   # Setting up custom node
   echo "Downloading TrackingPlai"
   cd custom_nodes
-  git clone https://github.com/randomcmd/TrackingPlai
+  git clone --recursive-submodules https://github.com/randomcmd/TrackingPlai
   cd TrackingPlai
   ./TAPIP3D_setup.sh
   ./AllTracker_setup.sh
