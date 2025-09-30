@@ -12,7 +12,7 @@ PROJECT_ROOT = os.path.abspath(
 if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
 
-from TAPIP3D.utils.inference_utils import inference, load_model
+from utils.inference_utils import inference, load_model
 
 import numpy as np
 import torch
