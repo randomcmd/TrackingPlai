@@ -1,6 +1,9 @@
 from inspect import cleandoc
 
 class AllTrackerNode:
+    """
+    AllTracker Tracking
+    """
     def __init__(self):
         pass
 

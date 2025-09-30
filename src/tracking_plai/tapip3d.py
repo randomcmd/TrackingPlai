@@ -1,6 +1,9 @@
 from inspect import cleandoc
 
 class Tapip3DNode:
+    """
+    Tapip3D Tracking
+    """
     def __init__(self):
         pass
 
