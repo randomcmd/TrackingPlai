@@ -1,5 +1,3 @@
-git clone https://github.com/aharley/alltracker
-
 cd alltracker
 pip install -r requirements.txt
 

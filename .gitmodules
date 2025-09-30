@@ -1,0 +1,6 @@
+[submodule "alltracker"]
+	path = alltracker
+	url = https://github.com/aharley/alltracker
+[submodule "TAPIP3D"]
+	path = TAPIP3D
+	url = https://github.com/zbw001/TAPIP3D

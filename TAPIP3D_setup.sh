@@ -1,5 +1,3 @@
-git clone https://github.com/zbw001/TAPIP3D
-
 cd TAPIP3D
 pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 "xformers>=0.0.27" --index-url https://download.pytorch.org/whl/cu124
 pip install torch-scatter -f https://data.pyg.org/whl/torch-2.4.1+cu124.html
