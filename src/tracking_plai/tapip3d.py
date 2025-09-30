@@ -6,7 +6,7 @@ import sys
 import os
 
 PROJECT_ROOT = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..", "TrackingPlai")
+    os.path.join(os.path.dirname(__file__), "..", "..", "TrackingPlai", "TAPIP3D")
 )                     # …\ComfyUI\custom_nodes\..\..\TrackingPlai
 if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
