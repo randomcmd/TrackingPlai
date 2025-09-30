@@ -38,9 +38,6 @@ class Tapip3DNode:
         # Track video using model
         resolution_factor = 2
         
-        # TODO: import load_model(checkpoint) from TAPIP3D
-        # from utils.inference_utils import load_model, read_video, inference, get_grid_queries, resize_depth_bilinear
-    
         model = load_model("")
         model.to(self.device)
 
@@ -61,7 +58,6 @@ class Tapip3DNode:
         )
 
         with torch.autocast("cuda", dtype=torch.bfloat16):
-            # TODO: import inference from TAPIP3D
             coords, visibs = inference(
                 model=model,
                 video=video,
