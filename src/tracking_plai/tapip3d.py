@@ -1,6 +1,6 @@
 from inspect import cleandoc
 
-class TrackingPlai:
+class Tapip3DNode:
     """
     A example node
 

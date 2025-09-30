@@ -1,6 +1,6 @@
 from inspect import cleandoc
 
-class TrackingPlai:
+class AllTrackerNode:
     """
     A example node
 
