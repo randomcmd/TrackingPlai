@@ -1,8 +1,7 @@
 from inspect import cleandoc
-from pathlib import Path
 import json
 
-from ..TAPIP3D.utils.inference_utils import inference, load_model
+from TAPIP3D.utils.inference_utils import inference, load_model
 
 import numpy as np
 import torch
