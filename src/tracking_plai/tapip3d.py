@@ -34,6 +34,8 @@ class Tapip3DNode:
         images_np = np.ascontiguousarray((images_np * 255).astype(np.uint8))
         video = self.preprocess_images(images)
 
+        _ = video
+
         # Track video using model
         results = [{
             "x": tracking_point_x, 
