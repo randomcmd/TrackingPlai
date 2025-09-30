@@ -7,7 +7,7 @@ pip install -r requirements.txt
 pip install gdown
 
 touch __init__.py
-pip install -e
+pip install -e .
 
 cd third_party/pointops2
 LIBRARY_PATH=$CONDA_PREFIX/lib:$LIBRARY_PATH python setup.py install
