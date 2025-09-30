@@ -1,13 +1,29 @@
 from inspect import cleandoc
 import json
-
-# TODO: THIS IMPORT IS THE BIGGEST HEADACHE EVER running it works but importing it breaks everything
-from ..TAPIP3D.utils.inference_utils import inference, load_model
+import os
+import sys
 
 import numpy as np
 import torch
 
 import comfy.model_management as mm
+
+# Add TAPIP3D to Python path dynamically
+_tapip3d_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "TAPIP3D")
+if os.path.exists(_tapip3d_path) and _tapip3d_path not in sys.path:
+    sys.path.insert(0, _tapip3d_path)
+
+# Import from TAPIP3D - now using absolute import after adding to sys.path
+try:
+    from utils.inference_utils import inference, load_model
+except ImportError as e:
+    # Provide a helpful error message if TAPIP3D is not set up
+    print(f"Warning: Could not import TAPIP3D modules. Please run TAPIP3D_setup.sh first. Error: {e}")
+    # Define dummy functions to allow the node to load without crashing
+    def inference(*args, **kwargs):
+        raise RuntimeError("TAPIP3D is not properly installed. Please run TAPIP3D_setup.sh")
+    def load_model(*args, **kwargs):
+        raise RuntimeError("TAPIP3D is not properly installed. Please run TAPIP3D_setup.sh")
 
 class Tapip3DNode:
     """
@@ -38,9 +54,6 @@ class Tapip3DNode:
         # Track video using model
         resolution_factor = 2
         
-        # TODO: import load_model(checkpoint) from TAPIP3D
-        # from utils.inference_utils import load_model, read_video, inference, get_grid_queries, resize_depth_bilinear
-    
         model = load_model("")
         model.to(self.device)
 
@@ -61,7 +74,6 @@ class Tapip3DNode:
         )
 
         with torch.autocast("cuda", dtype=torch.bfloat16):
-            # TODO: import inference from TAPIP3D
             coords, visibs = inference(
                 model=model,
                 video=video,
