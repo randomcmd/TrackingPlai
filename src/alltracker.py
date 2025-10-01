@@ -1,6 +1,6 @@
 from inspect import cleandoc
 
-from alltracker_demo_modified import run
+from .alltracker_demo_modified import run
 
 class AllTrackerNode:
     """
