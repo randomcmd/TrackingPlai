@@ -1,10 +1,6 @@
 from inspect import cleandoc
-import os
-import sys
 
-file_dir = os.path.dirname(__file__)
-sys.path.append(file_dir)
-from alltracker_demo_modified import run
+from .alltracker_demo_modified import run
 
 class AllTrackerNode:
     """
@@ -31,4 +27,6 @@ class AllTrackerNode:
     CATEGORY = "Tracking"
 
     def track(self, images):
+        print("Calling run")
+        run(None, None)
         return (images,)
