@@ -2,7 +2,7 @@ from inspect import cleandoc
 import json
 
 # TODO: THIS IMPORT IS THE BIGGEST HEADACHE EVER running it works but importing it breaks everything
-from ..TAPIP3D.utils.inference_utils import inference, load_model
+# from ..TAPIP3D.utils.inference_utils import inference, load_model
 
 import numpy as np
 import torch
